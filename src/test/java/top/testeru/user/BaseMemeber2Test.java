@@ -6,9 +6,7 @@ import io.appium.java_client.android.options.app.SupportsAutoGrantPermissionsOpt
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +15,6 @@ import top.testeru.util.FakerUtil;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -31,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
  * @Version 1.0
  * @create: 2022/7/22 11:08
  */
-public class BaseMemeber {
+public class BaseMemeber2Test {
     public static AndroidDriver driver;
     public static String name;
     public static String zh_phone;
@@ -77,38 +74,48 @@ public class BaseMemeber {
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10), Duration.ofSeconds(2));
 //2、点击通讯录，跳转到通讯录页面
 //        driver.findElement(AppiumBy.xpath("//*[@text=\"通讯录\"]")).click();
-        driver.findElement(AppiumBy.cssSelector("[text=\"通讯录\"]")).click();
+//        driver.findElement(AppiumBy.cssSelector("[text=\"通讯录\"]")).click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"通讯录\")")).click();
 
     }
 
     @Test
-    public void add(){
+    public void addTest(){
 //3、点击添加成员，跳转到添加成员页面
 //        driver.findElement(AppiumBy.xpath("//*[@text=\"添加成员\"]")).click();
-        driver.findElement(AppiumBy.cssSelector("[text=\"添加成员\"]")).click();
+//        driver.findElement(AppiumBy.cssSelector("[text=\"添加成员\"]")).click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"添加成员\")")).click();
+
+
 
         //List<WebElement> elements = driver.findElements(AppiumBy.id("com.tencent.wework:id/f_x"));
         //elements.get(elements.size()-1).click();
 //4、点击手动输入添加，跳转到输入成员信息页面
 //        driver.findElement(AppiumBy.xpath("//*[@text=\"手动输入添加\"]")).click();
-        driver.findElement(AppiumBy.cssSelector("[text=\"手动输入添加\"]")).click();
+//        driver.findElement(AppiumBy.cssSelector("[text=\"手动输入添加\"]")).click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"手动输入添加\")")).click();
 
         //输入姓名
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/bwp")).sendKeys(name);
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/bwp")).sendKeys(name);
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/bwp")).sendKeys(name);
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/bwp\")")).sendKeys(name);
 
-        //输入手机号
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/hyw")).sendKeys(zh_phone);
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/hyw")).sendKeys(zh_phone);
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/hyw")).sendKeys(zh_phone);
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/hyw\")")).sendKeys(zh_phone);
 
 //5、点击保存，toast显示添加成功，跳转到添加成员页面
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/aw3")).click();
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/aw3")).click();
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/aw3")).click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/aw3\")")).click();
+
 
 //6、返回到通讯录页面 添加成员页面返回com.tencent.wework:id/kz6
 //        driver.findElement(AppiumBy.xpath("//*[@text=\"添加成员\"]/../../../preceding-sibling::*")).click();
 //        WebElement element1 = driver.findElement(AppiumBy.id("com.tencent.wework:id/kz6"));
-        WebElement element1 = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6"));
+//        WebElement element1 = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6"));
+        WebElement element1 = driver.findElement(
+                AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/kz6\")"));
         element1.click();
 
         webDriverWait.until(webDriver -> webDriver.getPageSource().contains("添加客户"));
@@ -116,11 +123,14 @@ public class BaseMemeber {
         //搜索查找
 //7、通讯录页面点击搜索按钮
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/l00")).click();
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/l00")).click();
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/l00")).click();
+        driver.findElement(
+            AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/l00\")")).click();
 
 //8、搜索框输入姓名
 //        WebElement element = driver.findElement(AppiumBy.xpath("//*[@text=\"搜索\"]"));
-        WebElement element = driver.findElement(AppiumBy.cssSelector("[text=\"搜索\"]"));
+//        WebElement element = driver.findElement(AppiumBy.cssSelector("[text=\"搜索\"]"));
+        WebElement element = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"搜索\")"));
 
         element.clear();
         element.sendKeys(name);
@@ -128,33 +138,46 @@ public class BaseMemeber {
 
 //9、点击搜索结果下的联系人下的第一个结果，跳转到个人信息页面
         WebElement memberEle = driver.findElement(AppiumBy.xpath("//*[@text=\"联系人\"]/../following-sibling::*//*[@class=\"android.widget.TextView\"]"));
-//        WebElement memberEle = driver.findElement(AppiumBy.cssSelector("[text=\"联系人\"]/../following-sibling::*//*[class=\"android.widget.TextView\"]"));
+        //new UiSelector().textContains("董鹏飞")
 
+        System.out.println(memberEle.getAttribute("resource-id"));
         //点击联系人下的第一个搜索结果，进入到个人信息页面
         memberEle.click();
         webDriverWait.until(webDriver -> webDriver.getPageSource().contains("手机"));
 // 10、获取姓名、手机号
         //获取个人姓名
 //        String memberName = driver.findElement(AppiumBy.id("com.tencent.wework:id/kbc")).getText();
-        String memberName = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kbc")).getText();
+//        String memberName = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kbc")).getText();
+        String memberName = driver.findElement(
+                AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/kbc\")")).getText();
 
         //获取个人到手机号
 //        String phone = driver.findElement(AppiumBy.id("com.tencent.wework:id/bxg")).getText();
-        String phone = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/bxg")).getText();
+//        String phone = driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/bxg")).getText();
+        String phone = driver.findElement(
+            AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/bxg\")")).getText();
 
 //11、返回到搜索结果页面
         //点击返回 个人信息页面的返回 com.tencent.wework:id/kz6
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/kz6")).click();
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6")).click();
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6")).click();
+        driver.findElement(
+            AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/kz6\")")).click();
 
 //12、返回到通讯录页面
         //点击返回 搜索页面的返回 com.tencent.wework:id/kz6
 
 
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/j_s")).click();
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/j_s")).click();
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/j_s")).click();
+        driver.findElement(
+                AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/j_s\")")).click();
+
 //        driver.findElement(AppiumBy.id("com.tencent.wework:id/kz6")).click();
-        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6")).click();
+//        driver.findElement(AppiumBy.cssSelector("#com\\.tencent\\.wework\\:id\\/kz6")).click();
+        driver.findElement(
+                AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.tencent.wework:id/kz6\")")).click();
+
 //13、验证姓名、手机号是否一致
         assertAll(
                 ()-> assertThat(name,is(equalTo(memberName))),

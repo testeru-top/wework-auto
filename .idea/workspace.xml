@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dafb1ccf-930e-4d47-82bd-8c79149a23d6" name="Changes" comment="weworkapp">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wework-auto.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/top/testeru/user/BaseMemeber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/testeru/user/BaseMemeber.java" afterDir="false" />
+    <list default="true" id="dafb1ccf-930e-4d47-82bd-8c79149a23d6" name="Changes" comment="css定位">
+      <change afterPath="$PROJECT_DIR$/20220722.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20220723.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/top/testeru/user/BaseMemeberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/top/testeru/work/BasePunchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/top/testeru/user/BaseMemeber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/top/testeru/user/BaseMemeber2Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,12 +50,16 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="JUnit.BaseMemeber">
-    <configuration name="BaseMemeber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="top.testeru.user" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BasePunchTest">
+    <configuration name="BaseMemeberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wework-auto" />
       <extension name="coverage">
         <pattern>
@@ -59,8 +68,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="top.testeru.user" />
-      <option name="MAIN_CLASS_NAME" value="top.testeru.user.BaseMemeber" />
+      <option name="MAIN_CLASS_NAME" value="top.testeru.user.BaseMemeberTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaseMemeberTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wework-auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.testeru.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.testeru.user" />
+      <option name="MAIN_CLASS_NAME" value="top.testeru.user.BaseMemeberTest" />
+      <option name="METHOD_NAME" value="addTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,9 +106,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BaseMemeber.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wework-auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.testeru.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.testeru.user" />
+      <option name="MAIN_CLASS_NAME" value="top.testeru.user.BaseMemeber" />
+      <option name="METHOD_NAME" value="addTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasePunchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wework-auto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.testeru.work.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.testeru.work" />
+      <option name="MAIN_CLASS_NAME" value="top.testeru.work.BasePunchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BaseMemeber" />
+        <item itemvalue="JUnit.BasePunchTest" />
+        <item itemvalue="JUnit.BaseMemeberTest.addTest" />
+        <item itemvalue="JUnit.BaseMemeberTest" />
+        <item itemvalue="JUnit.BaseMemeber.addTest" />
         <item itemvalue="JUnit.BaseMemeber.add" />
       </list>
     </recent_temporary>
@@ -99,7 +158,10 @@
       <workItem from="1658471525066" duration="115000" />
       <workItem from="1658471654194" duration="167000" />
       <workItem from="1658471834269" duration="7266000" />
-      <workItem from="1658499526933" duration="1042000" />
+      <workItem from="1658499526933" duration="2243000" />
+      <workItem from="1658505323334" duration="1936000" />
+      <workItem from="1658542216739" duration="532000" />
+      <workItem from="1658566418566" duration="3493000" />
     </task>
     <servers />
   </component>
@@ -120,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="weworkapp" />
-    <option name="LAST_COMMIT_MESSAGE" value="weworkapp" />
+    <MESSAGE value="css定位" />
+    <option name="LAST_COMMIT_MESSAGE" value="css定位" />
   </component>
 </project>
